@@ -22,9 +22,7 @@ import Foundation
 
 extension String {
 
-  public func attributed(_ factory: (inout TextAttributes) -> Void) -> NSAttributedString {
-    var attributes = TextAttributes()
-    factory(&attributes)
-    return NSAttributedString(string: self, attributes: attributes)
+  public func attributed(_ factory: (TextAttributes) -> TextAttributes) -> NSAttributedString {
+    return NSAttributedString(string: self, attributes: factory(TextAttributes()))
   }
 }
