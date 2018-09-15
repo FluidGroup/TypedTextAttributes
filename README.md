@@ -20,7 +20,8 @@ It's very simple sample code.
 
 ```swift
 let attributedString = "Hello".attributed {
-  $0.font(UIFont.preferredFont(forTextStyle: .headline))
+  TextAttributes()
+    .font(UIFont.preferredFont(forTextStyle: .headline))
     .foregroundColor(.white)
     .alignment(.right)
 }
