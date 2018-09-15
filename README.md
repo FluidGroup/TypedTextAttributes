@@ -1,5 +1,9 @@
 # 🖍 TypedTextAttributes
 
+<p align="center">
+  <img width=1280 src="./TypedTextAttributes.png">
+</p>
+
 <a href="https://developer.apple.com/swift"><img alt="Swift4" src="https://img.shields.io/badge/language-Swift4-orange.svg"/></a>
 <a href="https://github.com/muukii/TypedTextAttributes/releases/latest"><img alt="Release" src="https://img.shields.io/github/release/muukii/TypedTextAttributes.svg"/></a>
 <a href="https://cocoapods.org/pods/TypedTextAttributes"><img alt="CocoaPods" src="https://img.shields.io/cocoapods/v/TypedTextAttributes.svg"/></a>
