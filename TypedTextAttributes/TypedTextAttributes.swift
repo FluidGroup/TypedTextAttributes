@@ -255,6 +255,7 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 // MARK: ParagraphStyle
 extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
+  @inline(__always)
   private func updateParagraphStyle(_ c: (inout NSMutableParagraphStyle) -> Void) -> Dictionary {
     return update { `self` in
       var paragraphStyle = self.paragraphStyle ?? NSMutableParagraphStyle()
@@ -330,6 +331,7 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
 extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
+  @inline(__always)
   private func update(_ c: (inout Dictionary) -> Void) -> Dictionary {
     var _self = self
     c(&_self)

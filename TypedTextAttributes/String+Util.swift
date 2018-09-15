@@ -22,7 +22,11 @@ import Foundation
 
 extension String {
 
-  public func attributed(_ factory: (TextAttributes) -> TextAttributes) -> NSAttributedString {
-    return NSAttributedString(string: self, attributes: factory(TextAttributes()))
+  public func attributed(_ attributes: () -> TextAttributes) -> NSAttributedString {
+    return NSAttributedString(string: self, attributes: attributes())
+  }
+
+  public func attributed(_ attributes: @autoclosure () -> TextAttributes) -> NSAttributedString {
+    return NSAttributedString(string: self, attributes: attributes())
   }
 }

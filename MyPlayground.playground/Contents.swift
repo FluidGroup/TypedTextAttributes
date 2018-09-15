@@ -1,10 +1,12 @@
 import UIKit
 import TypedTextAttributes
 
-let text = "Hoge".attributed {
-  $0.font(UIFont.preferredFont(forTextStyle: .headline))
+let attributedString = "Hello".attributed {
+  TextAttributes()
+    .font(UIFont.preferredFont(forTextStyle: .headline))
     .foregroundColor(.white)
+    .alignment(.right)
 }
 
-print(text)
+print(attributedString)
 
