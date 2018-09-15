@@ -71,6 +71,8 @@ And, `[NSAttributedString.Key : Any]` has typealias as `TextAttributes` in this 
 - paragraphSpacingBefore
 - lineBreakMode
 - ligature
+- attachment
+- shadow
 
 
 ## Installation

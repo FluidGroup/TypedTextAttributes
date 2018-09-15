@@ -29,7 +29,7 @@ extension NSColor {
     self.init(srgbRed: red, green: green, blue: blue, alpha: alpha)
   }
 }
-#elseif os(iOS)
+#else
 import UIKit
 public typealias Font  = UIFont
 public typealias Color = UIColor
@@ -329,6 +329,47 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
   }
 }
 
+#if !os(watchOS)
+extension Dictionary where Key == NSAttributedString.Key, Value == Any {
+
+  #if os(OSX)
+  @discardableResult
+  public func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Dictionary {
+    return shadow({
+      let shadow = NSShadow()
+      shadow.shadowColor = color
+      shadow.shadowOffset = offset
+      shadow.shadowBlurRadius = blurRadius
+      return shadow
+      }())
+  }
+
+  #else
+
+  @discardableResult
+  public func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Dictionary {
+    return shadow({
+      let shadow = NSShadow()
+      shadow.shadowColor = color
+      shadow.shadowOffset = offset
+      shadow.shadowBlurRadius = blurRadius
+      return shadow
+      }())
+  }
+  #endif
+
+  @discardableResult
+  public func shadow(_ shadow: NSShadow?) -> Dictionary {
+    return update { $0[.shadow] = shadow }
+  }
+
+  @discardableResult
+  public func attachment(_ attachment: NSTextAttachment?) -> Dictionary {
+    return update { $0[.attachment] = attachment }
+  }
+}
+#endif
+
 extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
   @inline(__always)
@@ -339,5 +380,4 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
   }
 
 }
-
 
