@@ -10,7 +10,6 @@
 <a href="https://github.com/Carthage/Carthage"><img alt="Carthage" src="https://img.shields.io/badge/Carthage-compatible-yellow.svg"/></a>
 </br>
 <a href="https://travis-ci.org/muukii/TypedTextAttributes"><img alt="Build Status" src="https://travis-ci.org/muukii/TypedTextAttributes.svg?branch=master"/></a>
-<a href="https://developer.apple.com/"><img alt="Platform" src="https://img.shields.io/badge/platform-iOS%20%7C%20OSX%20%7C%20tvOS%20%7C%20watchOS-green.svg"/></a>
 <a href="https://github.com/muukii/TypedTextAttributes/blob/master/LICENSE"><img alt="Lincense" src="http://img.shields.io/badge/license-MIT-000000.svg"/></a>
 
 **The Library Creating Text Attributes with Type-Safety**<br>
