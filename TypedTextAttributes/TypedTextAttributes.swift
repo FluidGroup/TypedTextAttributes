@@ -86,7 +86,7 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
   @discardableResult
   public func underlineStyle(_ style: NSUnderlineStyle) -> Dictionary {
-    return update { $0[.underlineStyle] = style }
+    return update { $0[.underlineStyle] = style.rawValue }
   }
 
   @discardableResult

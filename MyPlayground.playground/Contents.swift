@@ -6,6 +6,8 @@ let attributedString = "Hello".attributed {
     .font(UIFont.preferredFont(forTextStyle: .headline))
     .foregroundColor(.white)
     .alignment(.right)
+    .underlineStyle(.single)
+    .underlineColor(.white)
 }
 
 print(attributedString)
