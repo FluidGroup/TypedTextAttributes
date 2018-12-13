@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TypedTextAttributes"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "The Library Creating Text Attributes with Type-Safety"
   s.description  = <<-DESC
 The Library Creating Text Attributes with Type-Safety
