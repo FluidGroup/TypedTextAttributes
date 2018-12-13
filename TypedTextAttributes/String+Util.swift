@@ -22,11 +22,15 @@ import Foundation
 
 extension String {
 
+  @inlinable
   public func attributed(_ attributes: () -> TextAttributes) -> NSAttributedString {
-    return NSAttributedString(string: self, attributes: attributes())
+    let string = NSAttributedString(string: self, attributes: attributes())
+    return string
   }
 
+  @inlinable
   public func attributed(_ attributes: @autoclosure () -> TextAttributes) -> NSAttributedString {
-    return NSAttributedString(string: self, attributes: attributes())
+    let string = NSAttributedString(string: self, attributes: attributes())
+    return string
   }
 }
