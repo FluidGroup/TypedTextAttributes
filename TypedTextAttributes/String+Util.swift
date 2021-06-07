@@ -33,11 +33,19 @@ extension String {
     let string = NSAttributedString(string: self, attributes: attributes())
     return string
   }
-  
+
   @inlinable
   public func styled(_ build: (TextAttributes) -> TextAttributes) -> NSAttributedString {
     let attributes = TextAttributes()
     return self.attributed { build(attributes) }
   }
-  
+
+#if swift(>=5.4)
+
+  public func styled(_ atributes: TextAttributes) -> NSAttributedString {
+    return self.attributed { atributes }
+  }
+
+#endif
+
 }
