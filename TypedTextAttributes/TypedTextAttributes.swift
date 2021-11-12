@@ -76,7 +76,7 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
   @discardableResult
   public func strikethroughStyle(_ style: NSUnderlineStyle) -> Dictionary {
-    return update { $0[.strikethroughStyle] = style }
+    return update { $0[.strikethroughStyle] = style.rawValue }
   }
 
   @discardableResult
