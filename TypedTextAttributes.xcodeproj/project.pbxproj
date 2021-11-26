@@ -25,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4BC428552751597D0047A850 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4BE13508214C41D000C3608A /* TypedTextAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TypedTextAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE1350B214C41D000C3608A /* TypedTextAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypedTextAttributes.h; sourceTree = "<group>"; };
 		4BE1350C214C41D000C3608A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		4BE134FE214C41D000C3608A = {
 			isa = PBXGroup;
 			children = (
+				4BC428552751597D0047A850 /* Package.swift */,
 				4BFA87B9214C44AB0011DC43 /* MyPlayground.playground */,
 				4BE1350A214C41D000C3608A /* TypedTextAttributes */,
 				4BE13515214C41D000C3608A /* TypedTextAttributesTests */,
