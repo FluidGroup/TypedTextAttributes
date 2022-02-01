@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TypedTextAttributes"
-  s.version      = "1.3.0"
+  s.version      = "1.3.1"
   s.summary      = "The Library Creating Text Attributes with Type-Safety"
   s.description  = <<-DESC
 The Library Creating Text Attributes with Type-Safety
@@ -16,5 +16,6 @@ It will be helpful for creating NSAttributedString.
   s.source       = { :git => "https://github.com/muukii/TypedTextAttributes.git", :tag => "#{s.version}" }
   s.source_files  = "TypedTextAttributes", "TypedTextAttributes/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
+  s.swift_versions = ["5.3", "5.4", "5.5"]
 
 end
