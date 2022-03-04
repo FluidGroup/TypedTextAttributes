@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4BE13512214C41D000C3608A /* TypedTextAttributes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE13508214C41D000C3608A /* TypedTextAttributes.framework */; };
 		4BE13517214C41D000C3608A /* TypedTextAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE13516214C41D000C3608A /* TypedTextAttributesTests.swift */; };
-		4BE13519214C41D000C3608A /* TypedTextAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE1350B214C41D000C3608A /* TypedTextAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4BE13523214C41DC00C3608A /* TypedTextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE13522214C41DC00C3608A /* TypedTextAttributes.swift */; };
 		4BE13525214C420300C3608A /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE13524214C420300C3608A /* String+Util.swift */; };
 /* End PBXBuildFile section */
@@ -27,8 +26,6 @@
 /* Begin PBXFileReference section */
 		4BC428552751597D0047A850 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4BE13508214C41D000C3608A /* TypedTextAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TypedTextAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BE1350B214C41D000C3608A /* TypedTextAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypedTextAttributes.h; sourceTree = "<group>"; };
-		4BE1350C214C41D000C3608A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BE13511214C41D000C3608A /* TypedTextAttributesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypedTextAttributesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE13516214C41D000C3608A /* TypedTextAttributesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedTextAttributesTests.swift; sourceTree = "<group>"; };
 		4BE13518214C41D000C3608A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,8 +76,6 @@
 		4BE1350A214C41D000C3608A /* TypedTextAttributes */ = {
 			isa = PBXGroup;
 			children = (
-				4BE1350B214C41D000C3608A /* TypedTextAttributes.h */,
-				4BE1350C214C41D000C3608A /* Info.plist */,
 				4BE13522214C41DC00C3608A /* TypedTextAttributes.swift */,
 				4BE13524214C420300C3608A /* String+Util.swift */,
 			);
@@ -103,7 +98,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BE13519214C41D000C3608A /* TypedTextAttributes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +357,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TypedTextAttributes/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -389,7 +382,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TypedTextAttributes/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
