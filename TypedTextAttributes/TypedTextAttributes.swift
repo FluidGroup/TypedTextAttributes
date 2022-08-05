@@ -18,23 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#if os(OSX)
-import Cocoa
-public typealias Font  = NSFont
-public typealias Color = NSColor
-public typealias Image = NSImage
-
-extension NSColor {
-  public convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-    self.init(srgbRed: red, green: green, blue: blue, alpha: alpha)
-  }
-}
-#else
 import UIKit
-public typealias Font  = UIFont
-public typealias Color = UIColor
-public typealias Image = UIImage
-#endif
 
 public enum LigatureStyle: Int {
   case none = 0
@@ -77,7 +61,7 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
     return update { $0[.strikethroughStyle] = style.rawValue }
   }
 
-  public func strikethroughColor(_ color: Color?) -> Dictionary {
+  public func strikethroughColor(_ color: UIColor?) -> Dictionary {
     return update { $0[.strikethroughColor] = color }
   }
 
@@ -86,42 +70,42 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
   }
 
   public func underlineColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
-    return underlineColor(Color(white: white, alpha: alpha))
+    return underlineColor(UIColor(white: white, alpha: alpha))
   }
 
   public func underlineColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
-    return underlineColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
+    return underlineColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
   }
 
   public func underlineColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
-    return underlineColor(Color(red: red, green: green, blue: blue, alpha: alpha))
+    return underlineColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
   }
 
-  public func underlineColor(patternImage image: Image) -> Dictionary {
-    return underlineColor(Color(patternImage: image))
+  public func underlineColor(patternImage image: UIImage) -> Dictionary {
+    return underlineColor(UIColor(patternImage: image))
   }
 
-  public func underlineColor(_ color: Color?) -> Dictionary {
+  public func underlineColor(_ color: UIColor?) -> Dictionary {
     return update { $0[.underlineColor] = color }
   }
 
   public func strokeColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
-    return strokeColor(Color(white: white, alpha: alpha))
+    return strokeColor(UIColor(white: white, alpha: alpha))
   }
 
   public func strokeColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
-    return strokeColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
+    return strokeColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
   }
 
   public func strokeColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
-    return strokeColor(Color(red: red, green: green, blue: blue, alpha: alpha))
+    return strokeColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
   }
 
-  public func strokeColor(patternImage image: Image) -> Dictionary {
-    return strokeColor(Color(patternImage: image))
+  public func strokeColor(patternImage image: UIImage) -> Dictionary {
+    return strokeColor(UIColor(patternImage: image))
   }
 
-  public func strokeColor(_ color: Color?) -> Dictionary {
+  public func strokeColor(_ color: UIColor?) -> Dictionary {
     return update { $0[.strokeColor] = color }
   }
 
@@ -130,22 +114,22 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
   }
 
   public func foregroundColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
-    return foregroundColor(Color(white: white, alpha: alpha))
+    return foregroundColor(UIColor(white: white, alpha: alpha))
   }
 
   public func foregroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
-    return foregroundColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
+    return foregroundColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
   }
 
   public func foregroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
-    return foregroundColor(Color(red: red, green: green, blue: blue, alpha: alpha))
+    return foregroundColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
   }
 
-  public func foregroundColor(patternImage image: Image) -> Dictionary {
-    return foregroundColor(Color(patternImage: image))
+  public func foregroundColor(patternImage image: UIImage) -> Dictionary {
+    return foregroundColor(UIColor(patternImage: image))
   }
 
-  public func foregroundColor(_ color: Color?) -> Dictionary {
+  public func foregroundColor(_ color: UIColor?) -> Dictionary {
     return update { $0[.foregroundColor] = color }
   }
 
@@ -182,22 +166,22 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
   }
 
   public func backgroundColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
-    return backgroundColor(Color(white: white, alpha: alpha))
+    return backgroundColor(UIColor(white: white, alpha: alpha))
   }
 
   public func backgroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
-    return backgroundColor(Color(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
+    return backgroundColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
   }
 
   public func backgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
-    return backgroundColor(Color(red: red, green: green, blue: blue, alpha: alpha))
+    return backgroundColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
   }
 
-  public func backgroundColor(patternImage image: Image) -> Dictionary {
-    return backgroundColor(Color(patternImage: image))
+  public func backgroundColor(patternImage image: UIImage) -> Dictionary {
+    return backgroundColor(UIColor(patternImage: image))
   }
 
-  public func backgroundColor(_ color: Color?) -> Dictionary {
+  public func backgroundColor(_ color: UIColor?) -> Dictionary {
     return update { $0[.backgroundColor] = color }
   }
 
@@ -205,7 +189,7 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
     return update { $0[.font] = UIFont.init(name: name, size: size) }
   }
 
-  public func font(_ font: Font?) -> Dictionary {
+  public func font(_ font: UIFont?) -> Dictionary {
     return update { $0[.font] = font }
   }
 
