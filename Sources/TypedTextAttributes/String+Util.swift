@@ -23,26 +23,26 @@ import Foundation
 extension String {
 
   @inlinable
-  public func attributed(_ attributes: () -> TextAttributes) -> NSAttributedString {
-    let string = NSAttributedString(string: self, attributes: attributes())
+  public consuming func attributed(_ attributes: () -> TextAttributes) -> NSAttributedString {
+    let string = NSAttributedString(string: consume self, attributes: attributes())
     return string
   }
 
   @inlinable
-  public func attributed(_ attributes: @autoclosure () -> TextAttributes) -> NSAttributedString {
-    let string = NSAttributedString(string: self, attributes: attributes())
+  public consuming func attributed(_ attributes: @autoclosure () -> TextAttributes) -> NSAttributedString {
+    let string = NSAttributedString(string: consume self, attributes: attributes())
     return string
   }
 
   @inlinable
-  public func styled(_ build: (TextAttributes) -> TextAttributes) -> NSAttributedString {
+  public consuming func styled(_ build: (TextAttributes) -> TextAttributes) -> NSAttributedString {
     let attributes = TextAttributes()
     return self.attributed { build(attributes) }
   }
 
 #if swift(>=5.4)
 
-  public func styled(_ atributes: TextAttributes) -> NSAttributedString {
+  public consuming func styled(_ atributes: TextAttributes) -> NSAttributedString {
     return self.attributed { atributes }
   }
 
