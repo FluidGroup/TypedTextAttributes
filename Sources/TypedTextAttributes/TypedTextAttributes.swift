@@ -53,148 +53,148 @@ public typealias TextAttributes = [NSAttributedString.Key : Any]
 
 extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
-  public func ligature(_ ligature: LigatureStyle) -> Dictionary {
+  public consuming func ligature(_ ligature: LigatureStyle) -> Dictionary {
     return update { $0[.ligature] = ligature.rawValue }
   }
 
-  public func strikethroughStyle(_ style: NSUnderlineStyle) -> Dictionary {
+  public consuming func strikethroughStyle(_ style: NSUnderlineStyle) -> Dictionary {
     return update { $0[.strikethroughStyle] = style.rawValue }
   }
 
-  public func strikethroughColor(_ color: UIColor?) -> Dictionary {
+  public consuming func strikethroughColor(_ color: UIColor?) -> Dictionary {
     return update { $0[.strikethroughColor] = color }
   }
 
-  public func underlineStyle(_ style: NSUnderlineStyle) -> Dictionary {
+  public consuming func underlineStyle(_ style: NSUnderlineStyle) -> Dictionary {
     return update { $0[.underlineStyle] = style.rawValue }
   }
 
-  public func underlineColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func underlineColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
     return underlineColor(UIColor(white: white, alpha: alpha))
   }
 
-  public func underlineColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func underlineColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
     return underlineColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
   }
 
-  public func underlineColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func underlineColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
     return underlineColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
   }
 
-  public func underlineColor(patternImage image: UIImage) -> Dictionary {
+  public consuming func underlineColor(patternImage image: UIImage) -> Dictionary {
     return underlineColor(UIColor(patternImage: image))
   }
 
-  public func underlineColor(_ color: UIColor?) -> Dictionary {
+  public consuming func underlineColor(_ color: UIColor?) -> Dictionary {
     return update { $0[.underlineColor] = color }
   }
 
-  public func strokeColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func strokeColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
     return strokeColor(UIColor(white: white, alpha: alpha))
   }
 
-  public func strokeColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func strokeColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
     return strokeColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
   }
 
-  public func strokeColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func strokeColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
     return strokeColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
   }
 
-  public func strokeColor(patternImage image: UIImage) -> Dictionary {
+  public consuming func strokeColor(patternImage image: UIImage) -> Dictionary {
     return strokeColor(UIColor(patternImage: image))
   }
 
-  public func strokeColor(_ color: UIColor?) -> Dictionary {
+  public consuming func strokeColor(_ color: UIColor?) -> Dictionary {
     return update { $0[.strokeColor] = color }
   }
 
-  public func strokeWidth(_ width: CGFloat) -> Dictionary {
+  public consuming func strokeWidth(_ width: CGFloat) -> Dictionary {
     return update { $0[.strokeWidth] = width as NSNumber }
   }
 
-  public func foregroundColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func foregroundColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
     return foregroundColor(UIColor(white: white, alpha: alpha))
   }
 
-  public func foregroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func foregroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
     return foregroundColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
   }
 
-  public func foregroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func foregroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
     return foregroundColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
   }
 
-  public func foregroundColor(patternImage image: UIImage) -> Dictionary {
+  public consuming func foregroundColor(patternImage image: UIImage) -> Dictionary {
     return foregroundColor(UIColor(patternImage: image))
   }
 
-  public func foregroundColor(_ color: UIColor?) -> Dictionary {
+  public consuming func foregroundColor(_ color: UIColor?) -> Dictionary {
     return update { $0[.foregroundColor] = color }
   }
 
-  public func textEffect(_ style: TextEffect?) -> Dictionary {
+  public consuming func textEffect(_ style: TextEffect?) -> Dictionary {
     return update { $0[.textEffect] = style?.name }
   }
 
-  public func link(string: String) -> Dictionary {
+  public consuming func link(string: String) -> Dictionary {
     return link(URL(string: string))
   }
 
-  public func link(string: String, relativeToURL baseURL: URL) -> Dictionary {
+  public consuming func link(string: String, relativeToURL baseURL: URL) -> Dictionary {
     return link(URL(string: string, relativeTo: baseURL))
   }
 
-  public func link(_ URL: URL?) -> Dictionary {
+  public consuming func link(_ URL: URL?) -> Dictionary {
     return update { $0[.link] = URL }
   }
 
-  public func baselineOffset(_ value: CGFloat) -> Dictionary {
+  public consuming func baselineOffset(_ value: CGFloat) -> Dictionary {
     return update { $0[.baselineOffset] = value }
   }
 
-  public func obliqueness(_ value: CGFloat) -> Dictionary {
+  public consuming func obliqueness(_ value: CGFloat) -> Dictionary {
     return update { $0[.obliqueness] = value }
   }
 
-  public func expansion(_ value: CGFloat) -> Dictionary {
+  public consuming func expansion(_ value: CGFloat) -> Dictionary {
     return update { $0[.expansion] = value }
   }
 
-  public func verticalGlyphForm(_ value: VerticalGlyphForm) -> Dictionary {
+  public consuming func verticalGlyphForm(_ value: VerticalGlyphForm) -> Dictionary {
     return update { $0[.verticalGlyphForm] = value.rawValue }
   }
 
-  public func backgroundColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func backgroundColor(white: CGFloat, alpha: CGFloat) -> Dictionary {
     return backgroundColor(UIColor(white: white, alpha: alpha))
   }
 
-  public func backgroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func backgroundColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> Dictionary {
     return backgroundColor(UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha))
   }
 
-  public func backgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
+  public consuming func backgroundColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Dictionary {
     return backgroundColor(UIColor(red: red, green: green, blue: blue, alpha: alpha))
   }
 
-  public func backgroundColor(patternImage image: UIImage) -> Dictionary {
+  public consuming func backgroundColor(patternImage image: UIImage) -> Dictionary {
     return backgroundColor(UIColor(patternImage: image))
   }
 
-  public func backgroundColor(_ color: UIColor?) -> Dictionary {
+  public consuming func backgroundColor(_ color: UIColor?) -> Dictionary {
     return update { $0[.backgroundColor] = color }
   }
 
-  public func font(name: String, size: CGFloat) -> Dictionary {
+  public consuming func font(name: String, size: CGFloat) -> Dictionary {
     return update { $0[.font] = UIFont.init(name: name, size: size) }
   }
 
-  public func font(_ font: UIFont?) -> Dictionary {
+  public consuming func font(_ font: UIFont?) -> Dictionary {
     return update { $0[.font] = font }
   }
 
   @discardableResult
-  public func kern(_ value: CGFloat) -> Dictionary {
+  public consuming func kern(_ value: CGFloat) -> Dictionary {
     return update { $0[.kern] = value }
   }
 
@@ -205,7 +205,7 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
   @inline(__always)
-  private func updateParagraphStyle(_ c: (inout NSMutableParagraphStyle) -> Void) -> Dictionary {
+  private consuming func updateParagraphStyle(_ c: (inout NSMutableParagraphStyle) -> Void) -> Dictionary {
     return update { `self` in
       var paragraphStyle = self.paragraphStyle ?? NSMutableParagraphStyle()
       c(&paragraphStyle)
@@ -217,51 +217,51 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
     return self[.paragraphStyle] as? NSMutableParagraphStyle
   }
 
-  public func paragraphStyle(_ style: NSMutableParagraphStyle) -> Dictionary {
+  public consuming func paragraphStyle(_ style: NSMutableParagraphStyle) -> Dictionary {
     return update { $0[.paragraphStyle] = style }
   }
 
-  public func alignment(_ alignment: NSTextAlignment) -> Dictionary {
+  public consuming func alignment(_ alignment: NSTextAlignment) -> Dictionary {
     return updateParagraphStyle { $0.alignment = alignment }
   }
 
-  public func firstLineHeadIndent(_ value: CGFloat) -> Dictionary {
+  public consuming func firstLineHeadIndent(_ value: CGFloat) -> Dictionary {
     return updateParagraphStyle { $0.firstLineHeadIndent = value }
   }
 
-  public func headIndent(_ value: CGFloat) -> Dictionary {
+  public consuming func headIndent(_ value: CGFloat) -> Dictionary {
     return updateParagraphStyle { $0.headIndent = value }
   }
   
-  public func tailIndent(_ value: CGFloat) -> Dictionary {
+  public consuming func tailIndent(_ value: CGFloat) -> Dictionary {
     return updateParagraphStyle { $0.tailIndent = value }
   }
 
-  public func lineHeightMultiple(_ value: CGFloat) -> Dictionary {
+  public consuming func lineHeightMultiple(_ value: CGFloat) -> Dictionary {
     return updateParagraphStyle { $0.lineHeightMultiple = value }
   }
 
-  public func maximumLineHeight(_ value: CGFloat) -> Dictionary {
+  public consuming func maximumLineHeight(_ value: CGFloat) -> Dictionary {
     return updateParagraphStyle { $0.maximumLineHeight = value }
   }
 
-  public func minimumLineHeight(_ value: CGFloat) -> Dictionary {
+  public consuming func minimumLineHeight(_ value: CGFloat) -> Dictionary {
     return updateParagraphStyle { $0.minimumLineHeight = value }
   }
 
-  public func lineSpacing(_ value: CGFloat) -> Dictionary {
+  public consuming func lineSpacing(_ value: CGFloat) -> Dictionary {
     return updateParagraphStyle { $0.lineSpacing = value }
   }
 
-  public func paragraphSpacing(_ value: CGFloat) -> Dictionary {
+  public consuming func paragraphSpacing(_ value: CGFloat) -> Dictionary {
     return updateParagraphStyle { $0.paragraphSpacing = value }
   }
 
-  public func paragraphSpacingBefore(_ value: CGFloat) -> Dictionary {
+  public consuming func paragraphSpacingBefore(_ value: CGFloat) -> Dictionary {
     return updateParagraphStyle { $0.paragraphSpacingBefore = value }
   }
 
-  public func lineBreakMode(_ value: NSLineBreakMode) -> Dictionary {
+  public consuming func lineBreakMode(_ value: NSLineBreakMode) -> Dictionary {
     return updateParagraphStyle { $0.lineBreakMode = value }
   }
 }
@@ -270,7 +270,7 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
   #if os(OSX)
-  public func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Dictionary {
+  public consuming func shadow(color: NSColor?, offset: CGSize, blurRadius: CGFloat) -> Dictionary {
     return shadow({
       let shadow = NSShadow()
       shadow.shadowColor = color
@@ -282,7 +282,7 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
   #else
 
-  public func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Dictionary {
+  public consuming func shadow(color: AnyObject?, offset: CGSize, blurRadius: CGFloat) -> Dictionary {
     return shadow({
       let shadow = NSShadow()
       shadow.shadowColor = color
@@ -293,11 +293,11 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
   }
   #endif
 
-  public func shadow(_ shadow: NSShadow?) -> Dictionary {
+  public consuming func shadow(_ shadow: NSShadow?) -> Dictionary {
     return update { $0[.shadow] = shadow }
   }
 
-  public func attachment(_ attachment: NSTextAttachment?) -> Dictionary {
+  public consuming func attachment(_ attachment: NSTextAttachment?) -> Dictionary {
     return update { $0[.attachment] = attachment }
   }
 }
@@ -306,10 +306,9 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 extension Dictionary where Key == NSAttributedString.Key, Value == Any {
 
   @inline(__always)
-  private func update(_ c: (inout Dictionary) -> Void) -> Dictionary {
-    var _self = self
-    c(&_self)
-    return _self
+  private consuming func update(_ c: (inout Dictionary) -> Void) -> Dictionary {
+    c(&self)
+    return self
   }
 
 }
